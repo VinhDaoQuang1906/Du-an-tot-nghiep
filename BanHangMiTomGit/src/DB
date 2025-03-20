@@ -1,0 +1,77 @@
+create database banHangMiTom
+use banHangMiTom
+
+create table Account(
+ID int identity(1,1) primary key,
+matKhau nvarchar(20) not null,
+Email nvarchar(100) not null,
+chucVu int not null
+);
+
+create table Users(
+ID int identity(1,1) primary key,
+Email nvarchar(100) not null,
+loaiTK nvarchar(100) not null,
+hoTen nvarchar(100) not null,
+sdt nvarchar(13) not null,
+diaChi nvarchar(100)
+);
+
+create table SanPham(
+ID char(10) primary key,
+tenSP nvarchar(100) not null,
+trangThai BIT,
+gia float not null,
+soLuong int not null,
+img nvarchar(255) not null,
+ngayThem date
+);
+
+create table HoaDon(
+ID int identity(1,1) primary key,
+chiTiet nvarchar(max),
+ngayThanhToan date,
+tongTien float,
+trangThai nvarchar(100),
+giamGia nvarchar(100),
+phuongThucThanhToan nvarchar(100),
+diachi nvarchar(255),
+nguoiMua nvarchar(100)
+);
+
+create table Coupon(
+ID char(10) primary key,
+phanTramGiam int,
+Han date,
+trangThai BIT
+);
+
+create table Reviews(
+ID int identity(1,1) primary key,
+SoSao int,
+ND nvarchar(max),
+ngayDanhGia date
+);
+	
+
+
+
+
+insert into Account(matKhau, Email, chucVu) values('abcd5555','quanly@gmail.com',2),
+('abcd1111','taikhoan1@gmail.com',1),
+('abcd2222','taikhoan2@gmail.com',0),
+('abcd3333','taikhoan3@gmail.com',0)
+
+select * from Account
+insert into Users(Email, loaiTK,hoTen,sdt,diaChi) values('quanly@gmail.com',N'Quản lý',N'Trần Văn E','0587878555',N'Hà Nội'),
+('taikhoan1@gmail.com',N'Nhân viên',N'Nguyễn Văn A','0587878584',N'Hà Nội'),
+('taikhoan2@gmail.com',N'Khách',N'Lê Văn B','07729584948',N'Hải Phòng'),
+('taikhoan3@gmail.com',N'Khách',N'Trần Văn C','0987677889',N'Đà Nẵng')
+
+insert into SanPham values('SP001',N'Mì Indomie vị đặc biệt',1,7000,200,'C:\Users\jimbe\Documents\NetBeansProjects\BanHangMiTom\src\Resources\mi1.png','2025/3/11'),
+('SP002',N'Mì Indomie Hot & Spicy',1,7000,150,'C:\Users\jimbe\Documents\NetBeansProjects\BanHangMiTom\src\Resources\mi2.png','2025/3/11'),
+('SP003',N'Mì Hảo Hảo xào hải sản',1,7000,250,'C:\Users\jimbe\Documents\NetBeansProjects\BanHangMiTom\src\Resources\mi3.png','2025/3/11')
+
+insert into Coupon values('GG1',20,'2025/4/1',1),
+('GG2',25,'2025/3/10',0),
+('GG3',50,'2025/3/25',1)
