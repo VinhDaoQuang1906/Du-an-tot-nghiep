@@ -9,6 +9,7 @@ package Models;
  *
  * @author jimbe
  */
+
 public class Coupons {
     private String ID;
     private Integer phanTramGiam;
@@ -56,8 +57,5 @@ public class Coupons {
     public void setTrangThai(Boolean trangThai) {
         this.trangThai = trangThai;
     }
-    
-
-
-    
+        
 }
