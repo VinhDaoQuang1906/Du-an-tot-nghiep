@@ -44,6 +44,7 @@ public class Cart {
 
     public void setTotal(Float total) {
         this.total = total;
+    
     }
     
     
