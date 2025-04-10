@@ -12,6 +12,7 @@ public class Accounts {
     private String matKhau;
     
     private String Email;
+    
     private Integer chucVu;
 
     public Accounts() {
