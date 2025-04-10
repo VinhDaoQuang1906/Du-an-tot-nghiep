@@ -3,11 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Manage;
-
 import Models.Accounts;
-
 import Models.Bills;
-
 import Models.Coupons;
 
 import Models.Products;
