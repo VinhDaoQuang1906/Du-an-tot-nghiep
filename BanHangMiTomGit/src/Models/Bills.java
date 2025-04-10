@@ -10,10 +10,15 @@ package Models;
  */
 public class Bills {
     private String chiTiet;
+    
     private String ngayThanhToan;
+    
     private Float tongTien;
+    
     private String trangThai;
+    
     private String giamGia;
+    
     private String phuongThucTT;
     String diachi;
     String ngMua;
