@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package SQL;
-
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
@@ -14,7 +13,6 @@ import java.sql.SQLException;
  * @author jimbe
  */
 public class DbConnection {
-
     public static final String HOSTNAME = "DESKTOP-U7HAJLL\\SQLEXPRESS";
     public static final String PORT = "1433";
     public static final String DBNAME = "banHangMiTom";
