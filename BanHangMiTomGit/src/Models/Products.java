@@ -85,6 +85,8 @@ public class Products {
     public void setNgayThem(String ngayThem) {
         this.ngayThem = ngayThem;
     }
+
+
     
     
 }
