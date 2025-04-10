@@ -5,12 +5,17 @@
 package Manage;
 
 import Models.Accounts;
+
 import Models.Bills;
+
 import Models.Coupons;
+
 import Models.Products;
 import Models.Reviews;
 import Models.Users;
+
 import SQL.DbConnection;
+
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -21,8 +26,10 @@ import java.util.ArrayList;
  */
 public class QuanLySQL {
 
+    
     DbConnection connection;
 
+    
     public ArrayList<Accounts> getAccountList() {
         String query = "select * from Account";
         ArrayList<Accounts> list = new ArrayList<>();
@@ -83,6 +90,7 @@ public class QuanLySQL {
                 String ngMua = rs.getString(9);
                 Bills bill = new Bills(chiTiet, ngayTT, tongTien, trangThai, giamGia, phuongThuc, diachi, ngMua);
                 list.add(bill);
+           
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -92,8 +100,10 @@ public class QuanLySQL {
     }
 
     public ArrayList<Products> getProductsList() {
+        
         String query = "select * from SanPham";
         ArrayList<Products> list = new ArrayList<>();
+        
         try (Connection cn = connection.getConnection(); PreparedStatement ps = cn.prepareStatement(query)) {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -116,7 +126,9 @@ public class QuanLySQL {
 
     public ArrayList<Reviews> getReviewsList() {
         String query = "select * from Reviews";
+        
         ArrayList<Reviews> list = new ArrayList<>();
+        
         try (Connection cn = connection.getConnection(); PreparedStatement ps = cn.prepareStatement(query)) {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
