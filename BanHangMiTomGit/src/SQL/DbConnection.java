@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package SQL;
+
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
@@ -23,9 +24,8 @@ public class DbConnection {
     host name: localhost
     port mặc định là 1433
     DBNAME: tên database của mình
-
      */
-
+    
     /**
      * Get connection to MSSQL Server
      *
