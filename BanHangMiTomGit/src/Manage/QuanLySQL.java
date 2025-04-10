@@ -1,7 +1,9 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
 package Manage;
 import Models.Accounts;
 import Models.Bills;
@@ -18,12 +20,9 @@ import java.util.ArrayList;
  *
  * @author jimbe
  */
+
 public class QuanLySQL {
-
-    
     DbConnection connection;
-
-    
     public ArrayList<Accounts> getAccountList() {
         String query = "select * from Account";
         ArrayList<Accounts> list = new ArrayList<>();
@@ -39,7 +38,6 @@ public class QuanLySQL {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return list;
     }
 
@@ -63,7 +61,6 @@ public class QuanLySQL {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return list;
     }
 
@@ -84,20 +81,16 @@ public class QuanLySQL {
                 String ngMua = rs.getString(9);
                 Bills bill = new Bills(chiTiet, ngayTT, tongTien, trangThai, giamGia, phuongThuc, diachi, ngMua);
                 list.add(bill);
-           
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return list;
     }
 
-    public ArrayList<Products> getProductsList() {
-        
+    public ArrayList<Products> getProductsList() {        
         String query = "select * from SanPham";
-        ArrayList<Products> list = new ArrayList<>();
-        
+        ArrayList<Products> list = new ArrayList<>();        
         try (Connection cn = connection.getConnection(); PreparedStatement ps = cn.prepareStatement(query)) {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -114,15 +107,12 @@ public class QuanLySQL {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return list;
     }
 
     public ArrayList<Reviews> getReviewsList() {
-        String query = "select * from Reviews";
-        
-        ArrayList<Reviews> list = new ArrayList<>();
-        
+        String query = "select * from Reviews";        
+        ArrayList<Reviews> list = new ArrayList<>();       
         try (Connection cn = connection.getConnection(); PreparedStatement ps = cn.prepareStatement(query)) {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -135,7 +125,6 @@ public class QuanLySQL {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return list;
     }
 
@@ -156,7 +145,6 @@ public class QuanLySQL {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return list;
     }
 
@@ -177,7 +165,6 @@ public class QuanLySQL {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return list;
     }
 
@@ -197,7 +184,6 @@ public class QuanLySQL {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return list;
     }
 
